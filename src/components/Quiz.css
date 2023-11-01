@@ -1,16 +1,35 @@
 /* Task 2: 
 Enhance User Experience by adding visual highlights to selected answers
 Hint: You can use the className attribute for highlighting*/
+/* General styling for answer options, '.option' class*/
+.option {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px; /* Slightly more padding for better spacing */
+  margin: 6px 0; /* Slightly more margin for better separation */
+  border: 2px solid #ccc; /* Thicker border for better visibility */
+  border-radius: 8px; /* Slightly more rounded corners */
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Added transitions for transform and box-shadow */
+}
+
+.option:hover {
+  background-color: #e8e8e8; /* Slightly darker shade for better visual feedback */
+  border-color: #b8b8b8; /* Darker border color on hover */
+  transform: translateY(-2px); /* Slight upward movement for a dynamic effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+/* Styling for the selected answer */
 .selected {
-    cursor: pointer; /* Change cursor on hover for interactivity */
-  }
-  
+  background-color: #4CAF50; /* Darker green for a more pronounced effect */
+  color: white; /* Maintain white text for contrast */
+  border-color: #367C3B; /* Slightly darker green border for depth */
+  cursor: default; /* Standard cursor to indicate selection */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+  font-weight: bold; /* Bold text for emphasis */
+}
   /* Additional styling for better user experience */
-  .selected:hover {
-    cursor: pointer;
-  }
-  
-  
+
   /* Container styles */
   div {
     background-color: #f7f7f7;
@@ -21,6 +40,9 @@ Hint: You can use the className attribute for highlighting*/
     margin: 0 auto;
     font-family: Arial, sans-serif;
   }
+
+/* Other existing styles... */
+
   
   /* Header styles */
   h2 {
@@ -32,6 +54,7 @@ Hint: You can use the className attribute for highlighting*/
   p {
     font-size: 18px;
     margin: 10px 0;
+    font-weight: bold; /* Added for score styling */
   }
   
   /* Answer Options styles */
@@ -47,6 +70,11 @@ Hint: You can use the className attribute for highlighting*/
     margin: 4px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s; /* Added for smooth transitions */
+  }
+
+  li:hover {
+    background-color: #f4f4f4; /* Added hover effect */
   }
   
   /* Submit button styles */
